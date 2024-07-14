@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png">
+    <title>Sky-Scout</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="wrapper">
+    <h1 id="heading">Weather App</h1>
+
+    <div id="tabsection">
+        <div id="buttons">
+            <p class="tab" id="yourtab">Your Weather</p>
+            <p class="tab" id="searchtab">Search Weather</p>
+        </div>
+    </div>
+
+    <div id="weathercontainers">
+    
+    <!--* Grant location Container-->
+
+    <div id="grantlocationcontainer">
+        <div class="loader"></div>
+        <p id="granttext">Grant Location Access</p>
+        <p id="grantext2">Allow Access To Get Weather Information</p>
+        <button id="grantbutton">Grant Access</button>
+    </div>
+
+    
+    <!--! Search Form container-->
+    
+    <div id="searchformdiv">
+    <form id="searchformcontainer">
+        <input type="text" placeholder="Search For City..." id="forminput">
+        <button id="inputbtn" type="submit">
+            <img src="icon1.png" alt="" height="12px" width="14px" loading="lazy">
+        </button>
+      </form>
+    </div>
+
+    <!--^ Loading Screen Container -->
+    <div id="loadingscreencontainer">
+        <div class="contain">
+            <div class="folder">
+              <div class="top"></div>
+              <div class="bottom"></div>
+            </div>
+            <div class="title">Getting Location Ready...</div>
+          </div>
+    </div>
+
+    <!--? Your Weather Container -->
+<div id="yourtabcontainer">
+
+        <div id="name">
+            <p id="cityname"></p> 
+            <img id="countryflag"/>
+        </div>
+        <p id="weathercondition"></p>
+        <img id="weathericon"/>
+        <p id="temperature"></p>
+
+    <div id="parametercontainer">
+
+        <!--? card1-->
+        <div id="windspeed" class="card">
+            <img id="windspeedimage" src="windicon.gif">
+            <p>WindSpeed</p>
+            <p id="speed"></p>
+        </div>
+
+        <!--^ card 2 -->
+        <div id="humidity" class="card">
+            <img id="humidityicon" src="humidityicon.gif">
+            <p>Humidity</p>
+            <p id="humidityvalue"></p>
+        </div>
+
+        <!--! card 3 -->
+           <div id="cloud" class="card">
+            <img id="cloudicon" src="cloudicon.gif">
+            <p>Clouds</p>
+            <p id="cloudvalue"></p>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

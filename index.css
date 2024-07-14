@@ -1,0 +1,203 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    }
+    html,body
+    {
+    height:100%;
+    width:100%;
+    }
+    .loader {
+        width: 44.8px;
+        height: 44.8px;
+        position: relative;
+        transform: rotate(45deg);
+      }
+      
+      .loader:before,
+      .loader:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50% 50% 0 50%;
+        background: #0000;
+        background-image: radial-gradient(circle 11.2px at 50% 50%,#0000 94%, #ff4747);
+      }
+      
+      .loader:after {
+        animation: pulse 1s infinite;
+        transform: perspective(336px) translateZ(0px);
+      }
+      
+      @keyframes pulse {
+        to {
+          transform: perspective(336px) translateZ(168px);
+          opacity: 0;
+        }
+      }
+    
+      .contain {
+        margin-top:30px;
+        width: fit-content;
+        gap: 10px
+      }
+      
+      .folder {
+        width: min-content;
+        margin: auto;
+        animation: float 2s infinite linear;
+      }
+      
+      .folder .top {
+        background-color: #FF8F56;
+        width: 60px;
+        height: 12px;
+        border-top-right-radius: 10px;
+      }
+      
+      .folder .bottom {
+        background-color: #FFCE63;
+        width: 100px;
+        height: 70px;
+        box-shadow: 5px 5px 0 0 #283149;
+        border-top-right-radius: 8px;
+      }
+      
+      .contain .title {
+        font-size: .9em;
+        color: #283149;
+        text-align: center;
+        margin-top: 15px;
+      }
+      
+      @keyframes float {
+        0% {
+          transform: translatey(0px);
+        }
+      
+        50% {
+          transform: translatey(-25px);
+        }
+      
+        100% {
+          transform: translatey(0px);
+        }
+      }
+      
+    #wrapper
+    {
+        height:150%;
+        width:100%;
+        background-image: repeating-linear-gradient(135deg, rgba(68,68,68,0.07) 0px, rgba(68,68,68,0.07) 2px,transparent 2px, transparent 4px),repeating-linear-gradient(45deg, rgba(68,68,68,0.07) 0px, rgba(68,68,68,0.07) 2px,transparent 2px, transparent 4px),linear-gradient(0deg, rgb(85, 212, 253),rgb(1, 75, 183));
+    }
+    #heading
+    {
+        padding-top: 5px;
+        text-align: center;
+        text-transform: uppercase;
+        color:black;
+        font-size:30px;
+        font-family:Monument;
+    }
+    #tabsection
+    {
+        margin:0 auto;
+        height:80px;
+        width:500px;
+        color: black;
+    }
+    #buttons
+    {
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    #grantlocationcontainer{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        margin:20px;
+    }
+    #granttext
+    {
+        margin-top:40px;
+        font-size: 35px;
+        font-weight: 600;
+        color:black;
+    }
+    #grantext2
+    {
+        margin-top:10px;
+        color:black;
+    }
+    #grantbutton
+    {
+        height:28px;
+        width:100px; 
+        margin-top:20px;
+        border-radius: 5px;
+        border:0px solid transparent;
+        background-image: linear-gradient(to bottom,rgb(88, 197, 234),rgb(37, 101, 141));
+        color:black;
+    }
+    
+    #searchformdiv
+    {
+        scale:0;
+        opacity:0;
+        background-color: #283149;
+        display: flex;
+        justify-content: center;
+    }
+    #grantlocationcontainer
+    {
+      scale:0;
+      opacity:0;
+    }
+    #yourtabcontainer
+    {
+      scale:0;
+      opacity:0;
+    }
+    #loadingscreencontainer
+    {
+        scale:0;
+        opacity:0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .current-tab
+    {
+            background-color: #44bec681;
+            border-radius: 4px;
+    }
+    .active
+    {
+        scale: 1;
+        opacity:1;
+    }
+    #searchformdiv.active
+    {
+        scale:1;
+        opacity: 1;
+    }
+    #yourtabcontainer.active
+    {
+        scale:1;
+        opacity: 1;
+    }
+    #grantlocationcontainer.active
+    {
+      scale:1;
+      opacity:1;
+    }
+    #loadingscreencontainer.active
+    {
+      scale:1;
+      opacity: 1;
+    }
